@@ -37,7 +37,7 @@ namespace Patholabs_Express.DataAccess.Repository
 
         public int GetUserId(string email)
         {
-            return context.application_Users.Single(user => user.Email.Equals(email)).UserId;
+            return context.application_Users.Where(user => user.Email.Equals(email)).FirstOrDefault().UserId;
         }
     }
 }

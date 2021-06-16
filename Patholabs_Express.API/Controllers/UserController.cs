@@ -12,7 +12,7 @@ using System.Web.Http.Cors;
 namespace Patholabs_Express.API.Controllers
 {
     //[EnableCors(origins: "http://www.example.com", headers: "*", methods: "*")]
-    [DisableCors]
+    //[DisableCors]
     public class UserController : ApiController
     {
         private readonly UserService userService;
@@ -32,9 +32,16 @@ namespace Patholabs_Express.API.Controllers
             }
             else
             {
-                userService.Add(obj);
-                userAppService.Add(obj);
-                return Ok(new Responce() { Success = true, Message = "User Registered Successfully" });
+               if( userService.Add(obj))
+                {
+                    userAppService.Add(obj);
+                    return Ok(new Responce() { Success = true, Message = "User Registered Successfully" });
+                }
+               else
+                return Ok(new Responce() { Success = false, Message = "User Registered Successfully" });
+
+
+
             }
 
         }

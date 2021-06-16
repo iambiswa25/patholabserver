@@ -28,7 +28,7 @@ namespace Patholabs_Express.DataAccess.Repository
 
         public bool Exists(string email)
         {
-            return context.application_Users.Any(item => item.Email == email);
+            return context.Users.Any(item => item.Email == email);
         }
 
     }

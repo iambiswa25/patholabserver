@@ -13,6 +13,7 @@ namespace Patholabs_Express.BuisnessLogic.Services
     public class User_ApplicationService
     {
         private readonly Application_UserRepository userRepository;
+        private readonly UserRepository userRepositoryforuser;
 
 
 
@@ -21,6 +22,7 @@ namespace Patholabs_Express.BuisnessLogic.Services
         {
             context = new Patholabs_ExpressModel();
             userRepository = new Application_UserRepository();
+            userRepositoryforuser = new UserRepository();
         }
 
 
@@ -56,7 +58,7 @@ namespace Patholabs_Express.BuisnessLogic.Services
             {
                 if (!userRepository.Exists(dto.Email))
                 {
-
+                    dto.UserId = userRepositoryforuser.GetUserId(dto.Email);
                     var user = new Application_User { UserId = dto.UserId, Email = dto.Email, UserType = dto.UserType, Password = dto.Password };
                     return userRepository.Add(user) == 1;
                 }
