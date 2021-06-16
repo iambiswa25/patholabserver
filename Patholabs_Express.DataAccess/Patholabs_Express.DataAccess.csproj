@@ -63,6 +63,10 @@
     <Compile Include="Migrations\202106111743558_User_AdminDb.designer.cs">
       <DependentUpon>202106111743558_User_AdminDb.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202106161317315_appointment_DetailsDb.cs" />
+    <Compile Include="Migrations\202106161317315_appointment_DetailsDb.designer.cs">
+      <DependentUpon>202106161317315_appointment_DetailsDb.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Patholabs_ExpressModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -79,6 +83,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202106111743558_User_AdminDb.resx">
       <DependentUpon>202106111743558_User_AdminDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106161317315_appointment_DetailsDb.resx">
+      <DependentUpon>202106161317315_appointment_DetailsDb.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

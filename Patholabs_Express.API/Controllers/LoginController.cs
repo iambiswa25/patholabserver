@@ -7,9 +7,11 @@ using System.Web.Http;
 using Patholabs_Express.API.Models;
 using Patholabs_Express.BuisnessLogic;
 using Patholabs_Express.BuisnessLogic.DTOs;
+using System.Web.Http.Cors;
 
 namespace Patholabs_Express.API.Controllers
 {
+   
     public class LoginController : ApiController
     {
         private readonly User_AdminService loginService;
