@@ -29,9 +29,9 @@ namespace Patholabs_Express.DataAccess.Repository
             return context.application_Users.Any(item => item.Email == email);
         }
 
-        public bool ValidateCredentials(string email, string password)
+        public bool ValidateCredentials(string email, string password, enUserType userType)
         {
-            return context.application_Users.Any(user => user.Email.Equals(email) && user.Password.Equals(password));
+            return context.application_Users.Any(user => user.Email.Equals(email) && user.Password.Equals(password) && user.UserType==userType);
         }
 
 

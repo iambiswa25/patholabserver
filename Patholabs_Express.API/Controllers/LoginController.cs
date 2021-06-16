@@ -8,6 +8,7 @@ using Patholabs_Express.API.Models;
 using Patholabs_Express.BuisnessLogic;
 using Patholabs_Express.BuisnessLogic.DTOs;
 using System.Web.Http.Cors;
+using Patholabs_Express.DataAccess.Entities;
 
 namespace Patholabs_Express.API.Controllers
 {
@@ -23,11 +24,11 @@ namespace Patholabs_Express.API.Controllers
         [HttpPost]
         public IHttpActionResult Auth([FromBody] LoginDto loginDto)
         {
-            var user = loginService.Authenticate(loginDto.Email, loginDto.Password);
+            var user = loginService.Authenticate(loginDto.Email, loginDto.Password, loginDto.UserType);
 
             if (user == false)
-                return BadRequest();
-            return Ok();
+                return Ok(new Responce() { Success = false }); 
+            return Ok(new Responce() { Success = true});
 
         }
     }

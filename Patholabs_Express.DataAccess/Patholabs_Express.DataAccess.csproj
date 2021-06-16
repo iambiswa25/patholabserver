@@ -53,19 +53,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database.cs" />
     <Compile Include="Entities\Application_User.cs" />
     <Compile Include="Entities\Appointment_Details.cs" />
     <Compile Include="Entities\Responce.cs" />
     <Compile Include="Entities\Test_Details.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Entities\User_Admin.cs" />
-    <Compile Include="Migrations\202106111743558_User_AdminDb.cs" />
-    <Compile Include="Migrations\202106111743558_User_AdminDb.designer.cs">
-      <DependentUpon>202106111743558_User_AdminDb.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106161317315_appointment_DetailsDb.cs" />
-    <Compile Include="Migrations\202106161317315_appointment_DetailsDb.designer.cs">
-      <DependentUpon>202106161317315_appointment_DetailsDb.cs</DependentUpon>
+    <Compile Include="Migrations\202106162006332_UserDb.cs" />
+    <Compile Include="Migrations\202106162006332_UserDb.designer.cs">
+      <DependentUpon>202106162006332_UserDb.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Patholabs_ExpressModel.cs" />
@@ -81,11 +78,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202106111743558_User_AdminDb.resx">
-      <DependentUpon>202106111743558_User_AdminDb.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106161317315_appointment_DetailsDb.resx">
-      <DependentUpon>202106161317315_appointment_DetailsDb.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202106162006332_UserDb.resx">
+      <DependentUpon>202106162006332_UserDb.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

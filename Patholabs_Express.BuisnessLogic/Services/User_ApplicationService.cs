@@ -82,11 +82,11 @@ namespace Patholabs_Express.BuisnessLogic.Services
 
 
 
-        public bool Authenticate(string email, string password)
+        public bool Authenticate(string email, string password, enUserType userType)
         {
             try
             {
-                bool Succeded = userRepository.ValidateCredentials(email, password);
+                bool Succeded = userRepository.ValidateCredentials(email, password, userType);
                 if (Succeded)
                 {
                     return Succeded;

@@ -14,7 +14,7 @@ namespace Patholabs_Express.BuisnessLogic
         
     {
         private readonly User_AdminRepository userRepository;
-
+        private readonly Application_UserRepository application_UserRepository;
 
 
         private readonly Patholabs_ExpressModel context;
@@ -22,6 +22,7 @@ namespace Patholabs_Express.BuisnessLogic
         {
             context = new Patholabs_ExpressModel();
             userRepository = new User_AdminRepository();
+            application_UserRepository = new Application_UserRepository();
         }
 
       
@@ -91,10 +92,10 @@ namespace Patholabs_Express.BuisnessLogic
         }
 
 
-        public bool Authenticate(string email, string password)
+        public bool Authenticate(string email, string password, enUserType userType)
         {
            
-            bool Succeded = userRepository.ValidateCredentials(email, password);
+            bool Succeded = application_UserRepository.ValidateCredentials(email, password, userType);
             if (Succeded)
             {
                 return Succeded;

@@ -7,13 +7,13 @@ namespace Patholabs_Express.DataAccess.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class appointment_DetailsDb : IMigrationMetadata
+    public sealed partial class UserDb : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(appointment_DetailsDb));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(UserDb));
         
         string IMigrationMetadata.Id
         {
-            get { return "202106161317315_appointment_DetailsDb"; }
+            get { return "202106162006332_UserDb"; }
         }
         
         string IMigrationMetadata.Source
