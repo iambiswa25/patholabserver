@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Patholabs_Express.DataAccess.Entities
 {
-    public enum UserType
+    public enum enUserType
     {
         Admin, User
     }
@@ -22,6 +22,6 @@ namespace Patholabs_Express.DataAccess.Entities
         public string Email { get; set; }
         public string Password { get; set; }
 
-        public UserType UserType { get; set; }
+        public enUserType UserType { get; set; }
     }
 }
