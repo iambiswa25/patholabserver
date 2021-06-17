@@ -39,8 +39,7 @@ namespace Patholabs_Express.API.Controllers
         public IHttpActionResult Get()
         {
 
-            return Ok(testService.getall());
-
+            return Ok(new Responce() { Success = true, Message = "User Registered Successfully",Result= testService.getall() });
 
         }
         [HttpPut]

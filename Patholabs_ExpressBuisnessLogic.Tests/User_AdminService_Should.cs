@@ -41,7 +41,7 @@ namespace Patholabs_ExpressBuisnessLogic.Tests
         [Test]
         public void Return_Credentials()
         {
-            bool log = service.Authenticate("gunnu@gmail.com", "sej@12");
+            bool log = service.Authenticate("gunnu@gmail.com", "sej@12",Patholabs_Express.DataAccess.Entities.enUserType.Admin);
             bool x = true;
             Assert.AreEqual(x, log);
         }
